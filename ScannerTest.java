@@ -9,14 +9,9 @@ public class ScannerTest {
 	
 	public static void main(String[] args) throws IOException {
 
-        String expr = "-(8+12)**1*3/-4";
+        String expr = "1+2/b";
         
-       try {
-        	LexicalAnalyzerExample lexical = new LexicalAnalyzerExample(new StringReader(expr));
-        	lexical.yylex();
-       }catch(Exception e){
-    	   System.out.println("Caractere Inválido");
-       }
-
+        LexicalAnalyzerExample lexical = new LexicalAnalyzerExample(new StringReader(expr));
+        lexical.yylex();
     }
 }
